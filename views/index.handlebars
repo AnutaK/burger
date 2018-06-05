@@ -1,36 +1,34 @@
-<div class="container">
-  <img id="box" src="/assets/img/burger.jpg" alt="Burger" width="150" height="150">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 main-area">
+      <h3>Burgers to devour!</h3>
+      <ul>
+        <div>
+          {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devoured=true}} {{/unless}} {{/each}}
+        </div>
+      </ul>
+    </div>
+
+    <div class="col-md-6 main-area">
+      <h3>Devoured Burgers!</h3>
+      <ul>
+        {{#each burgers}} {{#if devoured}} {{>burgers/burger-block devoured=false}} {{/if}} {{/each}}
+      </ul>
+    </div>
+  </div>
 </div>
-
-<h2>Burgers that are not devoured!</h2>
-
-<ul>
-  {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devoured=true}} {{/unless}} {{/each}}
-</ul>
-
-<h2>Burgers that are devoured!</h2>
-
-<ul>
-  {{#each burgers}} {{#if devoured}} {{>burgers/burger-block devoured=false}} {{/if}} {{/each}}
-</ul>
-
-<h2>Eat-Da-Burger</h2>
+<hr>
 <form class="create-form">
 
   <div class="form-group">
     <label for="ca"></label>
-    <textarea name="textarea" rows="5" cols="35" id="ca" name="name"></textarea>
+    <textarea name="textarea" rows="5" cols="35" id="ca" name="name" placeholder="Enter a burger you want to eat..."></textarea>
   </div>
 
   <div class="container">
 
-    <button id="submit_button" type="submit" class="btn btn-primary">Submit</button>
+    <button id="submit_button" type="submit" class="btn btn-primary">Add a Burger!</button>
 
   </div>
-  <div class="container">
-    <h4>Enter a burger you want to eat. Then click Submit button</h4>
-
-  </div>
-
-
+  
 </form>
