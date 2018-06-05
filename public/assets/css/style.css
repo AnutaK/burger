@@ -1,0 +1,50 @@
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+body {
+  background-color: bisque;  
+}
+
+h2 {
+  text-align: center;
+  color: red;
+}
+
+/* #box {
+ display: flex;
+ justify-self: center;
+ } */
+
+ .container {
+   display: flex;
+   justify-content: center;
+ }
+
+ .form-group {
+  display: flex;
+  justify-content: center;
+ }
+ h4 {
+  display: flex;
+  justify-content: center;
+
+ }
+
+
